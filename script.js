@@ -12,7 +12,7 @@ submit.addEventListener("click", () => {
 
   let formData = { name, platform, hours_played, image_url };
 
-  fetch("https://semis-backend-fmgx.onrender.com/api/new-game", {
+  fetch("https://semis-backend-2edj.onrender.com/api/new-game", {
     method: "POST",
     body: JSON.stringify(formData),
     headers: {
