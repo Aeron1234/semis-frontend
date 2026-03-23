@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-screen bg-slate-800 text-white p-8">
+    <div
+      class="w-full h-full grid grid-cols-[auto_1fr] gap-4 max-w-[1200px] mx-auto"
+    >
+      <div
+        class="flex self-center w-full flex-col bg-slate-600 rounded-md p-4 items-center gap-6 shadow-lg"
+      >
+        <h1 class="self-center font-bold text-2xl">Games library</h1>
+        <form class="p-2 flex-1 w-[400px] flex flex-col gap-4" id="gameForm">
+          <label class="flex flex-col gap-1">
+            <span class="text-base font-bold">Name</span>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="outline-none border border-white p-1 text-base rounded-md"
+              placeholder="Name of game..."
+            />
+          </label>
+
+          <label class="flex flex-col gap-1">
+            <span class="text-base font-bold">Platform</span>
+            <select
+              name="platform"
+              id="platform"
+              class="outline-none border border-white p-1 text-base rounded-md"
+            >
+              <option value="console" class="text-black">Console</option>
+              <option value="computer" class="text-black">Computer</option>
+              <option value="mobile" class="text-black">Mobile</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col gap-1">
+            <span class="text-base font-bold">Number of hours</span>
+            <input
+              type="number"
+              name="hours_played"
+              id="hours_played"
+              class="outline-none border border-white p-1 text-base rounded-md"
+              placeholder="Number of hours you played the game..."
+            />
+          </label>
+
+          <label class="flex flex-col gap-1">
+            <span class="text-base font-bold">Image Url</span>
+            <input
+              type="text"
+              name="image_url"
+              id="image_url"
+              class="outline-none border border-white p-1 text-base rounded-md"
+              placeholder="url of image of the game..."
+            />
+          </label>
+
+          <button
+            id="add"
+            class="outline-none p-1 bg-blue-500 rounded-full mt-4"
+          >
+            Add Game
+          </button>
+
+          <button
+            id="update"
+            class="outline-none p-1 bg-slate-500 rounded-full"
+          >
+            Edit Game
+          </button>
+
+          <input type="hidden" name="id" id="id" />
+        </form>
+      </div>
+      <ul class="h-full flex flex-col gap-5 p-4" id="gameList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
